@@ -1,0 +1,39 @@
+header {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header #newGameButton {
+  text-decoration: none;
+  background-color: #bcbcbc;
+  padding: 5px;
+  border-radius: 10px;
+  color: black;
+}
+
+header #newGameButton:hover {
+  color: #5b5b5b;
+}
+
+header #newGameButton:active {
+  color: white;
+}
+
+#grid-container {
+  width: 420px;
+  height: 420px;
+  border-radius: 10px;
+  background-color: #d6fdfd;
+  margin: 0 auto;
+  position: relative;
+}
+
+.grid {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  position: absolute;
+}
