@@ -7,7 +7,15 @@ import {move} from "./game.js"
 var board = new Array(4)
 const startGame = document.getElementById('newGameButton')
 startGame.addEventListener('click', newGame)
-
+document.addEventListener('keydown', function(event){
+    switch(event.code){
+        case 'ArrowUp':{move(board, 'up');updateView();generateOneNumberInProcess();break}
+        case 'ArrowDown':{move(board, 'down');updateView();generateOneNumberInProcess();break}
+        case 'ArrowLeft':{move(board, 'left');updateView();generateOneNumberInProcess();break}
+        case 'ArrowRight':{move(board, 'right');updateView();generateOneNumberInProcess();break}
+        default: {break}
+    }
+})
 
 function newGame(){
     //initialize the grids
@@ -15,16 +23,6 @@ function newGame(){
     //generate two random numbers
     generateOneNumber()
     generateOneNumber()
-    //enable game
-    document.addEventListener('keydown', function(event){
-        switch(event.code){
-            case 'ArrowUp':{move(board, 'up');updateView();generateOneNumberInProcess();break}
-            case 'ArrowDown':{move(board, 'down');updateView();generateOneNumberInProcess();break}
-            case 'ArrowLeft':{move(board, 'left');updateView();generateOneNumberInProcess();break}
-            case 'ArrowRight':{move(board, 'right');updateView();generateOneNumberInProcess();break}
-            default: {break}
-        }
-    })
 }
 
 function init(){
